@@ -2,13 +2,13 @@
 
 (defpackage #:mnas-debug
   (:use #:cl)
-  (:export #:project-name
-           #:enable-debug    ;; enable
-           #:disable-debug   ;; disable
-           #:toggle-debug    ;; toggle
-           #:debug-feature-p ;; debug-p
-           #:when-debug      ;; with
-           #:debug-log
+  (:export #:project-name ;;
+           #:enable       ;; enable-debug
+           #:disable      ;; disable-debug
+           #:toggle       ;; toggle-debug
+           #:debug-p      ;; debug-feature-p
+           #:with         ;; when-debug
+           #:%log         ;; debug-log
            ))
 
 (in-package #:mnas-debug)

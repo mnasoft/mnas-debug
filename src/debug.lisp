@@ -25,10 +25,10 @@ keyword `:debug` which aligns with the helpers below.
       `(progn ,@body)
       nil))
 
-(defmacro log (&rest args)
+(defmacro %log (&rest args)
   "Compile-time gated logging helper. Expands to a `format` call when
 `:debug` is present in `*debug*`, otherwise to NIL.
-Usage: `(log "fmt~%" arg1 arg2)`" 
+Usage: `(%log \"fmt~%\" arg1 arg2)`" 
   (if (member :debug *debug* :test #'eq)
       `(progn (format t ,@args) (finish-output))
       nil))

@@ -13,5 +13,4 @@ ASDF/Quicklisp, повторная перезагрузка систем, зап
   :components ((:module "src"
 		:serial t
                 :components ((:file "package")
-                             (:file "debug")
-                             ))))
+                             (:file "debug")))))
