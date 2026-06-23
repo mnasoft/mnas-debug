@@ -40,12 +40,14 @@ with the new feature present.
 
 SYSTEM may be a symbol naming the ASDF system (e.g. 'mnas-sdl3-gui)."
   (unless (member :debug *debug* :test #'eq)
-    (push :debug *debug*)))
+    (push :debug *debug*))
+  *debug*)
 
 (defun disable ()
   "Remove `:debug` from `*debug*`. If SYSTEM is non-nil, recompile and
 load SYSTEM via ASDF so files are rebuilt without the debug feature."
-  (setf *debug* (remove :debug *debug* :test #'eq)))
+  (setf *debug* (remove :debug *debug* :test #'eq))
+  *debug*)
 
 (defun toggle ()
   "Toggle presence of `:debug` in `*debug*`. If SYSTEM is non-nil,
