@@ -9,6 +9,7 @@
            #:debug-p      ;; debug-feature-p
            #:with         ;; when-debug
            #:%log         ;; debug-log
+           #:undebug
            ))
 
 (in-package #:mnas-debug)
